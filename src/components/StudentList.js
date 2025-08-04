@@ -1,7 +1,7 @@
+// components/StudentList.js
 import React from 'react';
 
-export default function StudentList({ students, onDelete }) {
-
+export default function StudentList({ students, onDelete, onEdit }) {
   const deleteStudent = async id => {
     await fetch(`https://spring-boot-backend-uwx7.onrender.com/api/student/${id}`, {
       method: "DELETE"
@@ -21,6 +21,7 @@ export default function StudentList({ students, onDelete }) {
             <th>Name</th>
             <th>Age</th>
             <th>Mobile</th>
+            <th>Blood Group</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -31,7 +32,13 @@ export default function StudentList({ students, onDelete }) {
               <td>{s.name}</td>
               <td>{s.age}</td>
               <td>{s.mobile}</td>
-              <td><button onClick={() => deleteStudent(s.idNo)}>Delete</button></td>
+              <td>{s.bloodGroup}</td>
+              <td>
+                <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
+                    <button onClick={() => onEdit(s.idNo)}>Edit</button>
+                    <button onClick={() => deleteStudent(s.idNo)}>Delete</button>
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>
