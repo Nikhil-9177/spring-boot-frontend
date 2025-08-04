@@ -1,5 +1,5 @@
 // App.js
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import StudentForm from './components/StudentForm';
 import StudentList from './components/StudentList';
 import './App.css';
