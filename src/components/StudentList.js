@@ -13,7 +13,7 @@ export default function StudentList({ students, onDelete, onEdit }) {
 
   return (
     <div>
-      <h2>Students</h2>
+      <h2>Persons Data</h2>
       <table>
         <thead>
           <tr>

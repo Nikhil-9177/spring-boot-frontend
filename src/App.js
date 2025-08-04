@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div>
-      <h1>Student Management</h1>
+      <h1>Person Details</h1>
       <StudentForm
         onStudentAdded={fetchStudents}
         editingStudent={editingStudent}
