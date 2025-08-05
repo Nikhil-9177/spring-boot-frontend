@@ -12,7 +12,7 @@ export default function StudentForm({ onStudentAdded, editingStudent }) {
       setForm({ idNo: '', name: '', age: '', mobile: '', bloodGroup: '' });
     }
     setErrors({});
-  }, [editingStudent]);
+  }, []);
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
